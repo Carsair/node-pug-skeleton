@@ -28,7 +28,7 @@ function swapTabs () {
 
 // Listen to clicks on tabs.
 function listenTabs () {
-  $('.data').click(function (ev) {
+  $('.tab').click(function (ev) {
     clickedTab = $(ev.target);
     if (!clickedTab.data('SHOW_TAB')){
       swapTabs();

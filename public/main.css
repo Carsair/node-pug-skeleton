@@ -1,10 +1,8 @@
-/* BOTH */
 body {
   margin: 0;
 }
 
-/* DESKTOP */
-.data {
+.tab {
   width: 50%;
   position: fixed;
   text-align: center;
@@ -12,20 +10,33 @@ body {
 }
 
 /* Left */
-.data-left {
+.tab-left {
   background-color: #8c8cac;
   left: 0;
 }
 
 /* Right */
-.data-right {
+.tab-right {
   background-color: #ac8c8c;
   right: 0;
 }
 
+.candidate-name {
+  padding: 10px;
+  margin: 10px;
+  font-size: 24px;
+}
+
+.view {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
 /* MOBILE */
 @media screen and (max-width: 600px) {
-  .data {
+  .tab {
     width:60%;
   }
 }

@@ -1,5 +1,17 @@
 extends layout
 
+mixin views(views)
+  for view, idx in views
+    .view #{view.title}: #{view.text}
+
+mixin candidate(candidate, idx)
+  - var even = idx%2===0;
+  - var classText = even ? "tab-left" : "tab-right";
+  - var idText = even ? "left-tab" : "right-tab";
+  .tab(class=classText id=idText)
+    .candidate-name #{candidate.first_name} #{candidate.last_name}
+    +views(candidate.views)
+
 block content
-  .data.data-left#left-tab #{hillary.first_name} #{hillary.last_name}
-  .data.data-right#right-tab #{donald.first_name} #{donald.last_name}
+  for candidate, idx in CONTEXT.candidates
+    +candidate(candidate, idx)

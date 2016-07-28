@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "first_name": "Hillary",
+      "last_name": "Clinton",
+      "views": [
+        {
+          "title": "wall",
+          "text": "no"
+        }, {
+          "title": "gender",
+          "text": "woman"
+        }
+      ]
+    }, {
+      "first_name": "Donald",
+      "last_name": "Trump",
+      "views": [
+        {
+          "title": "wall",
+          "text": "yes"
+        }, {
+          "title": "gender",
+          "text": "male"
+        }
+      ]
+    }
+  ]
+}
