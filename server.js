@@ -7,6 +7,7 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
+  console.log("log");
   res.render('home', {
     name: "Hillary vs Trump"
   });
