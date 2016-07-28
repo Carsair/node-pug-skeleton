@@ -14,6 +14,7 @@ function initTabs () {
   $right.data('SHOW_TAB', false);
 }
 
+// Swap oder of tabs.
 function swapTabs () {
   var tempZIndex =  $left.css('z-index');
   var tempData = $left.data('SHOW_TAB');
@@ -32,17 +33,10 @@ function listenTabs () {
     if (!clickedTab.data('SHOW_TAB')){
       swapTabs();
     }
-
-    // console.log();
-    // var temp = $left.css('z-index');
-    // console.log(temp);
-    // $left.css('z-index', $right.css('z-index'));
-    // $right.css('z-index', temp);
   });
 }
 
 initTabs();
 listenTabs();
 
-console.log("Hillary vs Trump");
 console.log("Hillary vs Trump");
