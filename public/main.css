@@ -1,3 +1,31 @@
+/* BOTH */
 body {
   margin: 0;
+}
+
+/* DESKTOP */
+.data {
+  width: 50%;
+  position: fixed;
+  text-align: center;
+  height: 100%;
+}
+
+/* Left */
+.data-left {
+  background-color: #8c8cac;
+  left: 0;
+}
+
+/* Right */
+.data-right {
+  background-color: #ac8c8c;
+  right: 0;
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .data {
+    width:60%;
+  }
 }

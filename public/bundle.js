@@ -1,6 +1,51 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var $ = require("jquery");
 
+var $left = $('#left-tab');
+var $right = $('#right-tab');
+
+var SHOW_INDEX = 2;
+var HIDE_INDEX = 1;
+
+// Set up initial tab ordering.
+function initTabs () {
+  $left.css('z-index', SHOW_INDEX);
+  $left.data('SHOW_TAB', true);
+  $right.css('z-index', HIDE_INDEX);
+  $right.data('SHOW_TAB', false);
+}
+
+function swapTabs () {
+  var tempZIndex =  $left.css('z-index');
+  var tempData = $left.data('SHOW_TAB');
+
+  $left.css('z-index', $right.css('z-index'));
+  $left.data('SHOW_TAB', $right.data('SHOW_TAB'));
+
+  $right.css('z-index', tempZIndex);
+  $right.data('SHOW_TAB', tempData);
+}
+
+// Listen to clicks on tabs.
+function listenTabs () {
+  $('.data').click(function (ev) {
+    clickedTab = $(ev.target);
+    if (!clickedTab.data('SHOW_TAB')){
+      swapTabs();
+    }
+
+    // console.log();
+    // var temp = $left.css('z-index');
+    // console.log(temp);
+    // $left.css('z-index', $right.css('z-index'));
+    // $right.css('z-index', temp);
+  });
+}
+
+initTabs();
+listenTabs();
+
+console.log("Hillary vs Trump");
 console.log("Hillary vs Trump");
 
 },{"jquery":2}],2:[function(require,module,exports){
