@@ -22,6 +22,10 @@ app.get('/', function (req, res) {
   });
 });
 
+app.get('/compare', function (req, res) {
+  res.render('compare', data);
+});
+
 var PORT = process.env.PORT || 9000
 console.log("Listening on port: ", PORT);
 var server = app.listen(PORT);
