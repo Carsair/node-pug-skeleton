@@ -4,23 +4,13 @@ var express = require('express');
 var pug = require('pug');
 var app = express();
 
-var data = require('./data/data.json');
-
 app.set('view engine', 'pug');
 
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
   res.render('home', {
-    CONTEXT: {
-      name: "Hillary vs Trump"
-    }
-  });
-});
-
-app.get('/compare', function (req, res) {
-  res.render('compare', {
-    CONTEXT: data
+    name: "Carsair"
   });
 });
 

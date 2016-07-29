@@ -1,5 +1,5 @@
 {
-  "name": "platform",
+  "name": "node-pug-skeleton",
   "version": "1.0.0",
   "description": "",
   "engines": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com-carsair:Carsair/platform.git"
+    "url": "git@github.com-carsair:Carsair/node-pug-skeleton.git"
   },
   "author": "Carsair",
   "license": "All Rights Reserved.",
